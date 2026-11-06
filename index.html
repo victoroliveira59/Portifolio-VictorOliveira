@@ -1,43 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="Portifólio de Victor Oliveira, desenvolvedor Back-end" />
-    <meta name="author" content="Victor Oliveira" />
-    <meta property="og:description" content="Portifólio de Victor Oliveira, desenvolvedor Back-end" />
-    <meta property="og:image" content="./assets/images/imagem_terno_gravata.png" />
-    <meta property="og:type" content="website" />
-    <meta name="keywords" content="developer, programação, dev, desenvolvedor, programador, html, css, javascript, SQL, .NET, CSharp, github, frontend, back-end" />
-    <meta name="robots" content="index" />
 
+    <title>Victor Oliveira // Engenheiro de Software & Desenvolvedor .NET</title>
+
+    <meta
+      name="description"
+      content="Portfólio de Victor Oliveira - Engenheiro de Software e Desenvolvedor Back-end especializado em C#, .NET 8/9, Clean Architecture, Microsserviços e Sistemas Multi-Tenant."
+    />
+    <meta name="author" content="Victor Oliveira" />
+    <meta
+      name="keywords"
+      content="Victor Oliveira, .NET, C#, ASP.NET Core, Clean Architecture, DDD, Docker, SQL Server, PostgreSQL, RabbitMQ, Kafka, Desenvolvedor Backend, Software Engineer, Angular, TypeScript, COBOL"
+    />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Victor Oliveira // Desenvolvedor Back-end .NET" />
+    <meta
+      property="og:description"
+      content="Especialista em C#, .NET 8/9, Clean Architecture, APIs escaláveis e soluções Multi-Tenant corporativas."
+    />
+    <meta property="og:image" content="./assets/images/imagem_terno_gravata.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Gemunu+Libre:wght@200&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Gemunu+Libre:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
 
-    <link
-      rel="shortcut icon"
-      href="./assets/icons/favicon.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="./assets/icons/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- ScrollReveal & Scripts -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script type="module" src="./assets/js/main.js" defer></script>
-
-    <title>Victor // Portifólio</title>
   </head>
   <body>
+    <!-- NAVEGAÇÃO -->
     <nav id="navigation">
       <div class="wrapper">
-        <a class="logo close" href="#home"> victoroliveira </a>
+        <a class="logo close" href="#home" title="Ir para o início">
+          <span class="logo-badge">&lt;VO&nbsp;/&gt;</span>
+          <span class="logo-text">victor.oliveira</span>
+        </a>
 
         <div class="menu">
           <ul>
+            <li>
+              <a id="homeNav" class="close" href="#home">Início</a>
+            </li>
             <li>
               <a id="aboutNav" class="close" href="#about">Sobre mim</a>
             </li>
@@ -45,67 +63,24 @@
               <a id="projectsNav" class="close" href="#projects">Projetos</a>
             </li>
             <li>
-              <a id="knowledgeNav" class="close" href="#knowledge"
-                >Conhecimentos</a
-              >
+              <a id="knowledgeNav" class="close" href="#knowledge">Conhecimentos</a>
             </li>
             <li>
-              <a id="contactNav" class="close" href="#contact">Fale comigo</a>
+              <a id="contactNav" class="close" href="#contact">Contato</a>
             </li>
           </ul>
 
           <ul class="social-links">
             <li>
               <a
-                href=""
-                title="Instagram"
-                target="_blank"
-                ><svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z"
-                    stroke="#FFFAF1"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z"
-                    stroke="#FFFAF1"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M17.5 6.49997H17.51"
-                    stroke="#FFFAF1"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a
                 href="https://github.com/victoroliveira59"
-                title="Github"
+                title="GitHub @victoroliveira59"
                 target="_blank"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                >
-                  <path fill="none" d="M0 0h24v24H0z" />
+                rel="noopener noreferrer"
+              >
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
                   <path
                     d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12c0-5.525-4.475-10-10-10z"
-                    fill="rgba(255,255,255,1)"
                   />
                 </svg>
               </a>
@@ -113,37 +88,27 @@
             <li>
               <a
                 href="https://www.linkedin.com/in/victor-dev-oliveira/"
-                title="LinkedIn"
+                title="LinkedIn Victor Oliveira"
                 target="_blank"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                >
-                  <path fill="none" d="M0 0h24v24H0z" />
+                rel="noopener noreferrer"
+              >
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
                   <path
                     d="M6.94 5a2 2 0 1 1-4-.002 2 2 0 0 1 4 .002zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z"
-                    fill="rgba(255,255,255,1)"
                   />
                 </svg>
               </a>
             </li>
-         <li>
+            <li>
               <a
-                href=""
-                title="Twitter"
+                href="https://wa.me/5531988410483"
+                title="Conversar no WhatsApp"
                 target="_blank"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                >
-                  <path fill="none" d="M0 0h24v24H0z" />
+                rel="noopener noreferrer"
+              >
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
                   <path
-                    d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z"
-                    fill="rgba(255,255,255,1)"
+                    d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.1 7.42C8.89 7.42 8.53 7.5 8.22 7.83C7.91 8.16 7.04 8.97 7.04 10.63C7.04 12.28 8.25 13.88 8.42 14.1C8.59 14.33 10.79 17.72 14.17 19.18C14.97 19.53 15.6 19.74 16.09 19.89C16.9 20.15 17.63 20.11 18.21 20.03C18.86 19.93 20.22 19.21 20.5 18.41C20.79 17.62 20.79 16.95 20.7 16.81C20.62 16.67 20.4 16.58 20.08 16.42C19.75 16.26 18.15 15.47 17.85 15.36C17.55 15.25 17.33 15.2 17.11 15.53C16.9 15.86 16.28 16.58 16.09 16.79C15.9 17.01 15.71 17.04 15.38 16.88C15.06 16.71 14.01 16.37 12.77 15.26C11.8 14.39 11.15 13.32 10.96 13C10.77 12.67 10.94 12.49 11.1 12.33C11.25 12.18 11.43 11.95 11.6 11.76C11.77 11.56 11.82 11.42 11.93 11.2C12.04 10.97 11.99 10.78 11.91 10.62C11.82 10.45 11.2 8.92 10.94 8.31C10.69 7.71 10.44 7.79 10.25 7.78C10.07 7.77 9.86 7.77 9.64 7.77C9.42 7.77 9.1 7.42 9.1 7.42Z"
                   />
                 </svg>
               </a>
@@ -151,453 +116,574 @@
           </ul>
         </div>
 
-        <button
-          aria-expanded="false"
-          aria-label="Abrir menu"
-          class="open-menu open"
-        >
-          <svg
-            width="40"
-            height="40"
-            viewBox="0 0 40 40"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M10 20H30"
-              stroke="#00856F"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M10 12H30"
-              stroke="#00856F"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M18 28L30 28"
-              stroke="#00856F"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
+        <button aria-expanded="false" aria-label="Abrir menu" class="open-menu open">
+          <svg width="36" height="36" viewBox="0 0 40 40" fill="none">
+            <path d="M10 20H30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M10 12H30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M18 28L30 28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
           </svg>
         </button>
 
-        <button
-          aria-expanded="true"
-          aria-label="Fechar menu"
-          class="close-menu close"
-        >
-          <svg
-            width="40"
-            height="40"
-            viewBox="0 0 40 40"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M30 10L10 30M10 10L30 30"
-              stroke="#FFFAF1"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
+        <button aria-expanded="true" aria-label="Fechar menu" class="close-menu close">
+          <svg width="36" height="36" viewBox="0 0 40 40" fill="none">
+            <path d="M30 10L10 30M10 10L30 30" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
           </svg>
         </button>
       </div>
     </nav>
 
-    <section id="home">
-      <div class="wrapper">
-        <div class="col-a">
-          <header>
-            <h4>Hello world 👋🏾</h4>
-            <h1>Eu sou Victor,</h1>
-          </header>
-          <div class="content">
-            <p class="line typing">Desenvolvedor Web Back-end.</p>
-            <a class="button" href="#contact"> Fale comigo </a>
-          </div>
-        </div>
-
-        <div class="col-b">
-          <!-- <img
-            src="assets/images/notebook.png"
-            alt="Imagem de um notebook."
-            id="notebook-1"
-          /> -->
-          <!-- <img
-            src="assets/images/notebook-2.png"
-            alt="Imagem de um notebook com tela quebrada"
-            id="notebook-2"
-          /> -->
-          <!-- <img
-            src="assets/images/notebook-2-white.png"
-            alt="Imagem de um notebook com tela quebrada"
-            id="notebook-2-white"
-          /> -->
-          <img
-            src="./assets/images/1702060957335-removebg-preview.png"
-            alt="Imagem de estilhaços de vidro com os ícones de HTML5, CSS3 e JavaScript por cima."
-            id="vidro"
-          />
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="wrapper">
-        <div class="col-a">
-          <header>
-            <h2>Sobre mim</h2>
-          </header>
-          <div class="content">
-            <p>
-              <strong>Desenvolvedor Back-end</strong>, entusiasta de tecnologia e apaixonado por soluções eficientes.
-            </p>
-            <p>
-              Minha experiência inclui o desenvolvimento de aplicações utilizando .NET, C#, SQL Server e APIs REST, além de atuar na manutenção e modernização de sistemas legados em COBOL. Com um sólido compromisso em entregar resultados de qualidade, aplico práticas modernas de desenvolvimento e integração de tecnologias.
-            </p>
-            <ul class="my-list">
-              <li>
-                <strong>💡 Diferenciais:</strong>
-                <ul>
-                  <li>✔️ Experiência com .NET Framework, .NET Core, ASPNET e .NET 6+</li>
-                  <li>✔️ Desenvolvimento de APIs RESTful e integração com bancos de dados</li>
-                  <li>✔️ Conhecimento em AWS Cloud, Redis, Kafka e RabbitMQ</li>
-                  <li>✔️ Aplicação de metodologias ágeis (Scrum/Kanban) para projetos eficientes</li>
-                  <li>✔️ Manutenção e desenvolvimento de sistemas legados em COBOL</li>
-                </ul>
-              </li>
-            </ul>
-            <p>
-              <strong>🎯 Objetivo:</strong> Evoluir constantemente como desenvolvedor, aprimorar minhas habilidades e contribuir para projetos inovadores que façam a diferença.
-            </p>
-          </div>
-
-        </div>
-
-        <div class="col-b">
-          <img
-            src="./assets/images/imagem_terno_gravata.png""
-            alt="Imagem de Victor usando terno e gravata."
-          />
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="wrapper"></div>
-    </section>
-
-    <section id="knowledge">
-      <div class="wrapper">
-        <header>
-          <h2>Conhecimentos</h2>
-        </header>
-        <div class="content">
-          <div class="cards">
-            <div class="card">
-              <img src="assets/icons/net.png" alt="Ícone do .NET" />
-
-              <h3>.NET</h3>
-              <p>
-                .NET é uma plataforma de desenvolvimento de software da Microsoft
-                que roda principalmente em sistemas operacionais Microsoft Windows.
-              </p>
+    <main>
+      <!-- HERO SECTION -->
+      <section id="home">
+        <div class="wrapper">
+          <div class="col-a">
+            <div class="hero-status">
+              <span class="status-indicator"></span>
+              <span>Disponível para novos projetos & desafios</span>
             </div>
-            <div class="card">
-              <img src="assets/icons/dinosaur.png" alt="Ícone do Cobol" />
 
-              <h3>COBOL</h3>
-              <p>
-                COBOL é uma linguagem de programação de alto nível, orientada a
-                negócios, criada em 1959. Para muitos, é uma das linguagens mais
-                antigas ainda em uso. Muito usada em sistemas de processamento de dados.
+            <header>
+              <h4 class="hero-greeting">Olá mundo 👋🏾, me chamo</h4>
+              <h1 class="hero-name">Victor Oliveira</h1>
+              <div class="hero-role-wrapper">
+                <span class="hero-role-prefix">&gt; </span>
+                <span class="line typing">Engenheiro de Software & Dev .NET | AI Systems</span>
+              </div>
+            </header>
+
+            <div class="content">
+              <p class="hero-description">
+                Desenvolvo aplicações corporativas resilientes em <strong>C# e .NET</strong>,
+                com forte foco em <strong>Clean Architecture</strong>, soluções <strong>Multi-Tenant</strong>,
+                mensageria distribuída e governança por <strong>AI Agent Harness</strong>.
               </p>
-            </div>
-            <div class="card">
-              <img src="assets/icons/icons8-angular-64.png" alt="Ícone do Angular" />
 
-              <h3>Angular</h3>
-              <p>
-                Angular é uma plataforma de desenvolvimento para a construção de
-                aplicações web e móveis com TypeScript/JavaScript e outros idiomas. Muito
-                usado para criar aplicações de página única. Preferência para aplicações de grande porte.
-              </p>
-            </div>
-            <div class="card">
-              <img src="assets/icons/base-de-dados.png" alt="Ícone do SQL" />
-
-              <h3>SQL</h3>
-              <p>
-                SQL é uma linguagem de programação usada para gerenciar e manipular bancos de dados. Muito usada em sistemas de gerenciamento de banco de dados relacionais.
-              </p>
-            </div>
-            <div class="card">
-              <img src="assets/icons/visual-basico.png" alt="Ícone do VISUAL STUDIO" />
-
-              <h3>Visual Studio</h3>
-              <p>
-                Visual Studio é um ambiente de desenvolvimento integrado (IDE) da Microsoft. Usado para desenvolver programas de computador, bem como sites, aplicativos da web, aplicativos da web e serviços da web.
-              </p>
-            </div>
-            <div class="card">
-              <img src="assets/icons/aws.png" alt="Ícone do AWS" />
-
-              <h3>AWS</h3>
-              <p>
-               AWS é uma plataforma de serviços em nuvem da Amazon. Oferece serviços de computação, armazenamento, banco de dados, análise, redes, machine learning e inteligência artificial.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="wrapper">
-        <div class="col-a">
-          <header>
-            <h2>Fale comigo!</h2>
-          </header>
-          <div class="content">
-            <ul>
-              <li>
-                <a href="mailto: victorsamueloliveira59@gmail.com" title="Enviar e-mail">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
-                      stroke="#00856F"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M22 6L12 13L2 6"
-                      stroke="#00856F"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
+              <div class="hero-buttons">
+                <a class="button primary" href="#projects">
+                  <span>Explorar Projetos</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
                   </svg>
-
-                  victorsamueloliveira59@gmail.com
                 </a>
-              </li>
-              <li>
-                <a href="tel:+5531988410483" title="Fazer ligação"
-                  ><img
-                    src="./assets/icons/celular.svg"
-                    alt="Ícone de celular."
-                    id="cel"
-                  />
-                  +55 31 988410483</a
-                >
-              </li>
-            </ul>
+                <a class="button secondary" href="#contact">
+                  <span>Fale Comigo</span>
+                </a>
+              </div>
 
-            <a
-              class="button"
-              title="Me chama no zap!"
-              href="https://wa.me/+5531988410483"
-              target="_blank"
-            >
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M16.6 14.0001C16.4 13.9001 15.1 13.3001 14.9 13.2001C14.7 13.1001 14.5 13.1001 14.3 13.3001C14.1 13.5001 13.7 14.1001 13.5 14.3001C13.4 14.5001 13.2 14.5001 13 14.4001C12.3 14.1001 11.6 13.7001 11 13.2001C10.5 12.7001 10 12.1001 9.6 11.5001C9.5 11.3001 9.6 11.1001 9.7 11.0001C9.8 10.9001 9.9 10.7001 10.1 10.6001C10.2 10.5001 10.3 10.3001 10.3 10.2001C10.4 10.1001 10.4 9.9001 10.3 9.8001C10.2 9.7001 9.7 8.5001 9.5 8.0001C9.4 7.3001 9.2 7.3001 9 7.3001C8.9 7.3001 8.7 7.3001 8.5 7.3001C8.3 7.3001 8 7.5001 7.9 7.6001C7.3 8.2001 7 8.9001 7 9.7001C7.1 10.6001 7.4 11.5001 8 12.3001C9.1 13.9001 10.5 15.2001 12.2 16.0001C12.7 16.2001 13.1 16.4001 13.6 16.5001C14.1 16.7001 14.6 16.7001 15.2 16.6001C15.9 16.5001 16.5 16.0001 16.9 15.4001C17.1 15.0001 17.1 14.6001 17 14.2001C17 14.2001 16.8 14.1001 16.6 14.0001ZM19.1 4.9001C15.2 1.0001 8.9 1.0001 5 4.9001C1.8 8.1001 1.2 13.0001 3.4 16.9001L2 22.0001L7.3 20.6001C8.8 21.4001 10.4 21.8001 12 21.8001C17.5 21.8001 21.9 17.4001 21.9 11.9001C22 9.3001 20.9 6.8001 19.1 4.9001ZM16.4 18.9001C15.1 19.7001 13.6 20.2001 12 20.2001C10.5 20.2001 9.1 19.8001 7.8 19.1001L7.5 18.9001L4.4 19.7001L5.2 16.7001L5 16.4001C2.6 12.4001 3.8 7.4001 7.7 4.9001C11.6 2.4001 16.6 3.7001 19 7.5001C21.4 11.4001 20.3 16.5001 16.4 18.9001Z"
-                  fill="white"
-                />
-              </svg>
-              WhatsApp
-            </a>
+              <!-- Quick Tech Pills -->
+              <div class="hero-tech-pills">
+                <span class="pill">.NET 8/9</span>
+                <span class="pill">C#</span>
+                <span class="pill">Clean Architecture</span>
+                <span class="pill">AI Agent Harness</span>
+                <span class="pill">Docker</span>
+                <span class="pill">PostgreSQL & SQL Server</span>
+                <span class="pill">RabbitMQ & Kafka</span>
+                <span class="pill">TypeScript & Angular</span>
+                <span class="pill">COBOL</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-b">
+            <div class="hero-card-container">
+              <div class="hero-avatar-glow"></div>
+              <div class="hero-avatar-card">
+                <div class="card-inner-top">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                  <span class="card-tag">victor-oliveira.cs</span>
+                </div>
+                <div class="avatar-image-wrapper">
+                  <img
+                    src="./assets/images/imagem_terno_gravata.png"
+                    alt="Victor Oliveira - Desenvolvedor Back-end .NET"
+                    id="profile-avatar"
+                  />
+                </div>
+                <div class="hero-code-snippet">
+                  <code>
+                    <span class="kw">public record</span> <span class="cls">Developer</span>(<br />
+                    &nbsp;&nbsp;<span class="prop">string</span> Name = <span class="str">"Victor Oliveira"</span>,<br />
+                    &nbsp;&nbsp;<span class="prop">string</span> Focus = <span class="str">".NET & Clean Arch"</span>,<br />
+                    &nbsp;&nbsp;<span class="prop">bool</span> OpenToWork = <span class="bool">true</span><br />
+                    );
+                  </code>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div class="col-b">
-          <img src="./assets/images/celular-2.png" alt="Ícone de celular." />
+      <!-- SOBRE MIM -->
+      <section id="about">
+        <div class="wrapper">
+          <div class="col-a">
+            <header>
+              <span class="section-subtitle">Trajetória & Filosofia</span>
+              <h2>Sobre Mim</h2>
+            </header>
+
+            <div class="content">
+              <p>
+                Sou <strong>Engenheiro de Software</strong> e <strong>Desenvolvedor Back-end</strong> apaixonado por construir sistemas escaláveis, sustentáveis e orientados a resultados de negócio.
+              </p>
+              <p>
+                Minha atuação técnica concentra-se no ecossistema <strong>C# e .NET (.NET Core, .NET 8 e .NET 9)</strong>, combinando <strong>Clean Architecture</strong>, <strong>Domain-Driven Design (DDD)</strong> e práticas de engenharia como Repository Pattern, DTOs, testes automatizados e isolamento multi-inquilino (Multi-Tenancy).
+              </p>
+              <p>
+                Além de desenvolver aplicações modernas em nuvem com <strong>Docker</strong>, <strong>AWS</strong> e mensageria assíncrona (<strong>RabbitMQ / Kafka</strong>), possuo sólida experiência na sustentação, análise de negócio e modernização de sistemas corporativos de processamento de dados legados em <strong>COBOL</strong>.
+              </p>
+
+              <!-- Grid de Destaques Técnicos -->
+              <div class="about-highlights-grid">
+                <div class="highlight-card">
+                  <div class="highlight-icon">🏛️</div>
+                  <h4>Clean Arch & DDD</h4>
+                  <p>Separação de camadas, domínio rico, independência de frameworks e manutenibilidade.</p>
+                </div>
+
+                <div class="highlight-card">
+                  <div class="highlight-icon">⚡</div>
+                  <h4>Alta Performance</h4>
+                  <p>APIs RESTful velozes em .NET 8/9, streaming de dados em lote e consultas otimizadas.</p>
+                </div>
+
+                <div class="highlight-card">
+                  <div class="highlight-icon">🏢</div>
+                  <h4>Multi-Tenancy</h4>
+                  <p>Isolamento dinâmico de inquilinos por Tenant Context, segurança e escalabilidade SaaS.</p>
+                </div>
+
+                <div class="highlight-card">
+                  <div class="highlight-icon">🔄</div>
+                  <h4>Mensageria & Filas</h4>
+                  <p>Comunicação assíncrona e desacoplamento de serviços usando RabbitMQ e Apache Kafka.</p>
+                </div>
+
+                <div class="highlight-card">
+                  <div class="highlight-icon">🐳</div>
+                  <h4>Cloud & Docker</h4>
+                  <p>Ambientes conteinerizados reprodutíveis, microsserviços e integração com AWS / Azure.</p>
+                </div>
+
+                <div class="highlight-card">
+                  <div class="highlight-icon">📜</div>
+                  <h4>Modernização de Legados</h4>
+                  <p>Compreensão profunda de regras de negócio em COBOL e migração planejada para .NET.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-b">
+            <div class="about-photo-wrapper">
+              <div class="photo-glow"></div>
+              <img
+                src="./assets/images/imagem_terno_gravata.png"
+                alt="Foto de perfil de Victor Oliveira"
+              />
+              <div class="about-stat-pill top-right">
+                <span class="stat-number">+4 Anos</span>
+                <span class="stat-label">Construindo Soluções</span>
+              </div>
+              <div class="about-stat-pill bottom-left">
+                <span class="stat-number">100% .NET</span>
+                <span class="stat-label">Clean Code & Foco</span>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <a id="backToTopButton" title="Voltar ao topo" href="#home">
-      <svg
-        width="40"
-        height="40"
-        viewBox="0 0 40 40"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle cx="20" cy="20" r="20" fill="#00856F" />
-        <path
-          d="M20 27V13"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M13 20L20 13L27 20"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
+      <!-- PROJETOS (RENDERIZADO DINAMICAMENTE) -->
+      <section id="projects">
+        <div class="wrapper"></div>
+      </section>
+
+      <!-- CONHECIMENTOS & STACK -->
+      <section id="knowledge">
+        <div class="wrapper">
+          <header class="section-header">
+            <span class="section-subtitle">Habilidades Técnicas</span>
+            <h2>Conhecimentos & Stack</h2>
+            <p>
+              Tecnologias, linguagens, ferramentas e padrões arquiteturais que utilizo no dia a dia para desenvolver produtos sólidos.
+            </p>
+          </header>
+
+          <div class="content">
+            <div class="cards knowledge-grid">
+              <!-- .NET / C# -->
+              <div class="card knowledge-card">
+                <div class="card-icon-wrap">
+                  <img src="assets/icons/net.png" alt="Ícone do .NET" />
+                </div>
+                <h3>.NET & C# (.NET 8/9)</h3>
+                <p>
+                  Desenvolvimento completo com ASP.NET Core, Web APIs RESTful, Minimal APIs, ASP.NET MVC, LINQ, Dapper e Entity Framework Core.
+                </p>
+                <div class="skills-badges">
+                  <span>C# 12/13</span>
+                  <span>ASP.NET Core</span>
+                  <span>EF Core</span>
+                  <span>LINQ</span>
+                </div>
+              </div>
+
+              <!-- Arquitetura & Boas Práticas -->
+              <div class="card knowledge-card">
+                <div class="card-icon-wrap">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
+                  </svg>
+                </div>
+                <h3>Arquitetura de Software</h3>
+                <p>
+                  Domínio de Clean Architecture, Domain-Driven Design (DDD), princípios SOLID, Repository Pattern, Unit of Work e Design Patterns.
+                </p>
+                <div class="skills-badges">
+                  <span>Clean Arch</span>
+                  <span>DDD</span>
+                  <span>SOLID</span>
+                  <span>Multi-Tenant</span>
+                </div>
+              </div>
+
+              <!-- Bancos de Dados & SQL -->
+              <div class="card knowledge-card">
+                <div class="card-icon-wrap">
+                  <img src="assets/icons/base-de-dados.png" alt="Ícone de Bancos de Dados" />
+                </div>
+                <h3>Bancos de Dados & SQL</h3>
+                <p>
+                  Modelagem relacional, otimização de consultas, criação de índices, transações e migrations com SQL Server, PostgreSQL e MySQL.
+                </p>
+                <div class="skills-badges">
+                  <span>SQL Server</span>
+                  <span>PostgreSQL</span>
+                  <span>MySQL</span>
+                  <span>Migrations</span>
+                </div>
+              </div>
+
+              <!-- Docker & Containers -->
+              <div class="card knowledge-card">
+                <div class="card-icon-wrap">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="11" width="4" height="4" rx="0.5"></rect>
+                    <rect x="7" y="11" width="4" height="4" rx="0.5"></rect>
+                    <rect x="12" y="11" width="4" height="4" rx="0.5"></rect>
+                    <rect x="7" y="6" width="4" height="4" rx="0.5"></rect>
+                    <rect x="12" y="6" width="4" height="4" rx="0.5"></rect>
+                    <path d="M2 15c1.5 3 4.5 5 9 5s8.5-2.5 11-5c0-1-.5-2-1.8-2H2v2z"></path>
+                  </svg>
+                </div>
+                <h3>Docker & Conteinerização</h3>
+                <p>
+                  Criação de imagens otimizadas para aplicações .NET, orquestração multi-serviços com Docker Compose e isolamento de ambientes de desenvolvimento.
+                </p>
+                <div class="skills-badges">
+                  <span>Docker</span>
+                  <span>Docker Compose</span>
+                  <span>Containers</span>
+                </div>
+              </div>
+
+              <!-- Cloud (AWS & Azure) -->
+              <div class="card knowledge-card">
+                <div class="card-icon-wrap">
+                  <img src="assets/icons/aws.png" alt="Ícone da AWS" />
+                </div>
+                <h3>Cloud (AWS & Azure)</h3>
+                <p>
+                  Deploy e sustentação de serviços na nuvem, instâncias EC2, buckets S3 para storage, monitoramento de métricas e Azure App Services.
+                </p>
+                <div class="skills-badges">
+                  <span>AWS EC2</span>
+                  <span>AWS S3</span>
+                  <span>Azure</span>
+                  <span>Cloud Deploy</span>
+                </div>
+              </div>
+
+              <!-- Mensageria & Filas -->
+              <div class="card knowledge-card">
+                <div class="card-icon-wrap">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="5" cy="6" r="3"></circle>
+                    <circle cx="19" cy="6" r="3"></circle>
+                    <circle cx="12" cy="18" r="3"></circle>
+                    <path d="M7.8 7.2l6.4 8"></path>
+                    <path d="M16.2 7.2l-6.4 8"></path>
+                    <path d="M8 6h8"></path>
+                  </svg>
+                </div>
+                <h3>Mensageria & Filas</h3>
+                <p>
+                  Comunicação assíncrona, desacoplamento de microsserviços, processamento de tarefas em background com RabbitMQ e streaming contínuo com Apache Kafka.
+                </p>
+                <div class="skills-badges">
+                  <span>RabbitMQ</span>
+                  <span>Apache Kafka</span>
+                  <span>Event-Driven</span>
+                  <span>Polly Resiliência</span>
+                </div>
+              </div>
+
+              <!-- AI Agents & Automação Inteligente -->
+              <div class="card knowledge-card">
+                <div class="card-icon-wrap">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                  </svg>
+                </div>
+                <h3>AI Agents & Automação</h3>
+                <p>
+                  Modelagem de sistemas multiagentes autônomos (AI Agent Harness), governança DoR/DoD, integração de LLMs e automação inteligente no backend.
+                </p>
+                <div class="skills-badges">
+                  <span>AI Agent Harness</span>
+                  <span>Multi-Agent</span>
+                  <span>DoR / DoD</span>
+                  <span>LLM Integration</span>
+                </div>
+              </div>
+
+              <!-- TypeScript & Angular -->
+              <div class="card knowledge-card">
+                <div class="card-icon-wrap">
+                  <img src="assets/icons/icons8-angular-64.png" alt="Ícone do Angular" />
+                </div>
+                <h3>TypeScript & Angular</h3>
+                <p>
+                  Construção de Single Page Applications (SPA), consumo tipado de APIs RESTful, componentização limpa e interface de usuário reativa.
+                </p>
+                <div class="skills-badges">
+                  <span>TypeScript</span>
+                  <span>Angular</span>
+                  <span>JavaScript ES6+</span>
+                  <span>SPA</span>
+                </div>
+              </div>
+
+              <!-- COBOL & Mainframe -->
+              <div class="card knowledge-card">
+                <div class="card-icon-wrap">
+                  <img src="assets/icons/dinosaur.png" alt="Ícone do COBOL" />
+                </div>
+                <h3>COBOL & Sistemas Legados</h3>
+                <p>
+                  Análise técnica profunda, manutenção corretiva e evolutiva de programas de processamento em lote (Batch) e regras de negócio corporativas.
+                </p>
+                <div class="skills-badges">
+                  <span>COBOL</span>
+                  <span>Batch</span>
+                  <span>Mainframe</span>
+                  <span>Modernização</span>
+                </div>
+              </div>
+
+              <!-- Ferramentas & DevOps -->
+              <div class="card knowledge-card">
+                <div class="card-icon-wrap">
+                  <img src="assets/icons/visual-basico.png" alt="Ícone do Visual Studio" />
+                </div>
+                <h3>DevOps & Ferramentas</h3>
+                <p>
+                  Controle de versão com Git e GitHub, pipelines CI/CD com GitHub Actions, documentação interativa com Swagger/OpenAPI e testes com Postman.
+                </p>
+                <div class="skills-badges">
+                  <span>Git & GitHub</span>
+                  <span>Swagger / OpenAPI</span>
+                  <span>CI/CD</span>
+                  <span>Postman</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FALE COMIGO / CONTATO -->
+      <section id="contact">
+        <div class="wrapper">
+          <div class="col-a">
+            <header>
+              <span class="section-subtitle">Vamos Conversar?</span>
+              <h2>Fale Comigo</h2>
+            </header>
+
+            <div class="content">
+              <p>
+                Estou sempre aberto a novas oportunidades profissionais, desafios em engenharia de software e parcerias para projetos inovadores. Entre em contato pelos canais abaixo:
+              </p>
+
+              <div class="contact-links-list">
+                <a
+                  class="contact-card-link"
+                  href="mailto:victorsamueloliveira59@gmail.com"
+                  title="Enviar e-mail para Victor"
+                >
+                  <div class="contact-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                  </div>
+                  <div class="contact-info">
+                    <span class="label">E-mail Profissional</span>
+                    <strong class="value">victorsamueloliveira59@gmail.com</strong>
+                  </div>
+                </a>
+
+                <a
+                  class="contact-card-link"
+                  href="https://wa.me/5531988410483"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Chamar no WhatsApp"
+                >
+                  <div class="contact-icon whatsapp">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                  </div>
+                  <div class="contact-info">
+                    <span class="label">WhatsApp Direto</span>
+                    <strong class="value">+55 (31) 98841-0483</strong>
+                  </div>
+                </a>
+
+                <a
+                  class="contact-card-link"
+                  href="https://www.linkedin.com/in/victor-dev-oliveira/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Acessar LinkedIn"
+                >
+                  <div class="contact-icon linkedin">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                      <rect width="4" height="12" x="2" y="9"></rect>
+                      <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                  </div>
+                  <div class="contact-info">
+                    <span class="label">LinkedIn</span>
+                    <strong class="value">victor-dev-oliveira</strong>
+                  </div>
+                </a>
+              </div>
+
+              <div class="contact-cta-wrapper">
+                <a
+                  class="button whatsapp-btn"
+                  title="Iniciar conversa rápida no WhatsApp"
+                  href="https://wa.me/5531988410483"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67Z"/>
+                  </svg>
+                  Iniciar Conversa no WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-b">
+            <div class="contact-terminal-card">
+              <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="terminal-title">bash - victor@dev:~/contact</span>
+              </div>
+              <div class="terminal-body">
+                <p><span class="prompt">$</span> dotnet run --project MessageService</p>
+                <p class="terminal-output text-success">[INFO] Initializing communication channel...</p>
+                <p class="terminal-output text-info">[INFO] Victor Oliveira status: ONLINE & OPEN FOR OFFERS</p>
+                <p class="terminal-output">[INFO] Tech Stack: C#, .NET 8/9, Clean Arch, Docker</p>
+                <p class="terminal-output text-warning">[ACTION] Direct message route available at:</p>
+                <p class="terminal-output">&gt;&gt; victorsamueloliveira59@gmail.com</p>
+                <p class="terminal-output">&gt;&gt; +55 31 98841-0483</p>
+                <p><span class="prompt">$</span> <span class="cursor">_</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- VOLTAR AO TOPO -->
+    <a id="backToTopButton" title="Voltar ao topo" href="#home" aria-label="Voltar ao topo da página">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
       </svg>
     </a>
 
+    <!-- RODAPÉ -->
     <footer>
       <div class="wrapper">
         <div class="col-a">
-          <a class="logo" href="#home"> victoroliveira </a>
-
+          <a class="logo" href="#home">
+            <span class="logo-badge">&lt;VO&nbsp;/&gt;</span>
+            <span class="logo-text">victor.oliveira</span>
+          </a>
           <p>
-            ©2025 por Victor Oliveira. <br />
-            Todos os direitos reservados.
+            © 2026 Victor Oliveira. Todos os direitos reservados.<br />
+            Construído com código limpo, foco em performance e engenharia de software.
           </p>
         </div>
 
         <div class="col-b">
           <ul class="social-links">
-            <!-- <li>
-              <a
-                href=""
-                title="Instagram"
-                target="_blank"
-                ><svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M17 1.99997H7C4.23858 1.99997 2 4.23855 2 6.99997V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V6.99997C22 4.23855 19.7614 1.99997 17 1.99997Z"
-                    stroke="#FFFAF1"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M15.9997 11.3701C16.1231 12.2023 15.981 13.0523 15.5935 13.7991C15.206 14.5459 14.5929 15.1515 13.8413 15.5297C13.0898 15.908 12.2382 16.0397 11.4075 15.906C10.5768 15.7723 9.80947 15.3801 9.21455 14.7852C8.61962 14.1903 8.22744 13.4229 8.09377 12.5923C7.96011 11.7616 8.09177 10.91 8.47003 10.1584C8.84829 9.40691 9.45389 8.7938 10.2007 8.4063C10.9475 8.0188 11.7975 7.87665 12.6297 8.00006C13.4786 8.12594 14.2646 8.52152 14.8714 9.12836C15.4782 9.73521 15.8738 10.5211 15.9997 11.3701Z"
-                    stroke="#FFFAF1"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M17.5 6.49997H17.51"
-                    stroke="#FFFAF1"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </a>
-            </li> -->
             <li>
-              <a
-                href="https://github.com/victoroliveira59"
-                title="Github"
-                target="_blank"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                >
-                  <path fill="none" d="M0 0h24v24H0z" />
-                  <path
-                    d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12c0-5.525-4.475-10-10-10z"
-                    fill="rgba(255,255,255,1)"
-                  />
+              <a href="https://github.com/victoroliveira59" title="GitHub" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                  <path d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12c0-5.525-4.475-10-10-10z"/>
                 </svg>
               </a>
             </li>
             <li>
-              <a
-                href="https://www.linkedin.com/in/victor-dev-oliveira/"
-                title="LinkedIn"
-                target="_blank"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                >
-                  <path fill="none" d="M0 0h24v24H0z" />
-                  <path
-                    d="M6.94 5a2 2 0 1 1-4-.002 2 2 0 0 1 4 .002zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z"
-                    fill="rgba(255,255,255,1)"
-                  />
+              <a href="https://www.linkedin.com/in/victor-dev-oliveira/" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                  <path d="M6.94 5a2 2 0 1 1-4-.002 2 2 0 0 1 4 .002zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z"/>
                 </svg>
               </a>
             </li>
-            <!-- <li>
-              <a
-                href=""
-                title="Twitter"
-                target="_blank"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                >
-                  <path fill="none" d="M0 0h24v24H0z" />
-                  <path
-                    d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z"
-                    fill="rgba(255,255,255,1)"
-                  />
+            <li>
+              <a href="https://wa.me/5531988410483" title="WhatsApp" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                  <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67Z"/>
                 </svg>
               </a>
-            </li> -->
+            </li>
           </ul>
         </div>
       </div>
     </footer>
 
+    <!-- TOGGLE TEMA (DARK / LIGHT) -->
     <div id="toggle">
-      <input type="checkbox" id="sw-checkbox" />
+      <input type="checkbox" id="sw-checkbox" aria-label="Alternar modo escuro ou claro" />
       <label for="sw-checkbox" title="Mudar tema">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          width="20"
-          height="20"
-        >
-          <path fill="none" d="M0 0h24v24H0z" />
-          <path
-            d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.662 17.854 17.316 22 12.001 22 6.477 22 2 17.523 2 12c0-5.315 4.146-9.661 9.38-9.981z"
-          />
+        <!-- Ícone Lua (Dark) -->
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" class="theme-icon moon">
+          <path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.662 17.854 17.316 22 12.001 22 6.477 22 2 17.523 2 12c0-5.315 4.146-9.661 9.38-9.981z"/>
         </svg>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          width="20"
-          height="20"
-        >
-          <path fill="none" d="M0 0h24v24H0z" />
-          <path
-            d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"
-            fill="rgba(255,255,255,1)"
-          />
+        <!-- Ícone Sol (Light) -->
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" class="theme-icon sun">
+          <path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/>
         </svg>
       </label>
     </div>

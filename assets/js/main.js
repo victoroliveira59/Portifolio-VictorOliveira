@@ -1,4 +1,3 @@
-
 import { projetos } from "./projetos.js";
 
 const navigation = document.querySelector("#navigation");
@@ -6,47 +5,92 @@ const backToTopButton = document.querySelector("#backToTopButton");
 const toggle = document.querySelector("#sw-checkbox");
 const projectsSection = document.querySelector("#projects .wrapper");
 
-const notebook_1 = document.querySelector("#notebook-1");
-const notebook_2 = document.querySelector("#notebook-2");
-const notebook_2_white = document.querySelector("#notebook-2-white");
-const vidro = document.querySelector("#vidro");
+function init() {
+  initTheme();
 
-window.addEventListener("load", function begin() {
-  projetos(projectsSection);
-  const desafioBtn = document.querySelector("#desafio");
+  if (projectsSection) {
+    projetos(projectsSection);
+  }
 
-  desafioBtn.addEventListener("click", () => {
-    desafios(projectsSection);
-    document
-      .querySelector("#backToProjectsBtn")
-      .addEventListener("click", begin);
+  initMobileMenu();
+  initScrollReveal();
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", init);
+} else {
+  init();
+}
+
+// Controle de Tema (Dark / Light) com localStorage e detecção de preferência do SO
+function initTheme() {
+  if (!toggle) return;
+
+  const savedTheme = localStorage.getItem("theme");
+  const prefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+
+  // Aplica tema: se salvo 'light' ou se sem preferência salva e SO é 'light'
+  if (savedTheme === "light" || (!savedTheme && prefersLight)) {
+    document.body.classList.add("light-mode");
+    toggle.checked = true;
+  } else {
+    document.body.classList.remove("light-mode");
+    toggle.checked = false;
+  }
+
+  toggle.addEventListener("change", () => {
+    if (toggle.checked) {
+      document.body.classList.add("light-mode");
+      localStorage.setItem("theme", "light");
+    } else {
+      document.body.classList.remove("light-mode");
+      localStorage.setItem("theme", "dark");
+    }
   });
-});
 
-window.addEventListener("scroll", onScroll);
-onScroll();
-
-window.onload = setTimeout(() => {
-  notebook_1.style.opacity = 0;
-
-  notebook_1.style.animation = "none";
-  notebook_2.style.animation = "none";
-  notebook_2_white.style.animation = "none";
-  vidro.style.animation = "none";
-}, 4000);
+  // Escuta mudanças em tempo real na preferência do sistema operacional
+  if (window.matchMedia) {
+    window.matchMedia("(prefers-color-scheme: light)").addEventListener("change", (e) => {
+      if (!localStorage.getItem("theme")) {
+        if (e.matches) {
+          document.body.classList.add("light-mode");
+          toggle.checked = true;
+        } else {
+          document.body.classList.remove("light-mode");
+          toggle.checked = false;
+        }
+      }
+    });
+  }
+}
 
 function onScroll() {
   showNavOnScroll();
   showBackToTopButtonOnScroll();
 
-  activateMenuAtCurrentSection(about);
-  activateMenuAtCurrentSection(projects);
-  activateMenuAtCurrentSection(knowledge);
-  activateMenuAtCurrentSection(contact);
+  // Detecta se chegou ao fim da página (para ativar Contato com precisão)
+  const isBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 60;
+  if (isBottom) {
+    document.querySelectorAll(".menu a").forEach((el) => el.classList.remove("active"));
+    const contactLinks = document.querySelectorAll('.menu a[href*="#contact"]');
+    contactLinks.forEach((el) => el.classList.add("active"));
+    return;
+  }
+
+  const sections = ["home", "about", "projects", "knowledge", "contact"];
+  sections.forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      activateMenuAtCurrentSection(el);
+    }
+  });
 }
 
 function activateMenuAtCurrentSection(section) {
-  const targetLine = scrollY + innerHeight / 2;
+  const targetLine = window.scrollY + window.innerHeight / 2;
   const sectionTop = section.offsetTop;
   const sectionHeight = section.offsetHeight;
 
@@ -54,21 +98,23 @@ function activateMenuAtCurrentSection(section) {
   const sectionEndsAt = sectionTop + sectionHeight;
   const sectionEndPassedTargetLine = sectionEndsAt <= targetLine;
 
-  const sectionBoundaries =
-    sectionTopReachOrPassedTargetLine && !sectionEndPassedTargetLine;
+  const sectionBoundaries = sectionTopReachOrPassedTargetLine && !sectionEndPassedTargetLine;
 
   const sectionId = section.getAttribute("id");
-  const menuElement = document.querySelector(`.menu a[href*=${sectionId}]`);
+  const menuElements = document.querySelectorAll(`.menu a[href*="#${sectionId}"]`);
 
-  menuElement.classList.remove("active");
-
-  if (sectionBoundaries) {
-    menuElement.classList.add("active");
-  }
+  menuElements.forEach((el) => {
+    if (sectionBoundaries) {
+      el.classList.add("active");
+    } else {
+      el.classList.remove("active");
+    }
+  });
 }
 
 function showNavOnScroll() {
-  if (scrollY > 0) {
+  if (!navigation) return;
+  if (window.scrollY > 20) {
     navigation.classList.add("scroll");
   } else {
     navigation.classList.remove("scroll");
@@ -76,54 +122,72 @@ function showNavOnScroll() {
 }
 
 function showBackToTopButtonOnScroll() {
-  if (scrollY > 550) {
+  if (!backToTopButton) return;
+  if (window.scrollY > 400) {
     backToTopButton.classList.add("show");
   } else {
     backToTopButton.classList.remove("show");
   }
 }
 
-openMenu();
-function openMenu() {
-  const openBtns = document.querySelectorAll(".open");
-  openBtns.forEach((e) => {
-    e.addEventListener("click", () => {
-      document.body.classList.add("menu-expanded");
-    });
+function initMobileMenu() {
+  const openBtn = document.querySelector(".open-menu");
+  const closeBtns = document.querySelectorAll(".close-menu, .close, .menu a");
+
+  function openMenu() {
+    document.body.classList.add("menu-expanded");
+    if (openBtn) openBtn.setAttribute("aria-expanded", "true");
+  }
+
+  function closeMenu() {
+    document.body.classList.remove("menu-expanded");
+    if (openBtn) openBtn.setAttribute("aria-expanded", "false");
+  }
+
+  if (openBtn) {
+    openBtn.addEventListener("click", openMenu);
+  }
+
+  closeBtns.forEach((btn) => {
+    btn.addEventListener("click", closeMenu);
+  });
+
+  // Fechar menu ao pressionar Escape
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && document.body.classList.contains("menu-expanded")) {
+      closeMenu();
+    }
   });
 }
 
-closeMenu();
-function closeMenu() {
-  const closeBtns = document.querySelectorAll(".close");
-  closeBtns.forEach((e) => {
-    e.addEventListener("click", () => {
-      document.body.classList.remove("menu-expanded");
-    });
+function initScrollReveal() {
+  if (typeof ScrollReveal === "undefined") return;
+
+  // Respeita preferência por movimento reduzido
+  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
+
+  const sr = ScrollReveal({
+    origin: "bottom",
+    distance: "25px",
+    duration: 750,
+    easing: "ease-out",
+    reset: false
   });
+
+  sr.reveal(
+    `#home .col-a,
+     #home .col-b,
+     #about .col-a,
+     #about .col-b,
+     #about .highlight-card,
+     #projects .section-header,
+     #projects .project-card,
+     #knowledge .section-header,
+     #knowledge .card,
+     #contact .col-a,
+     #contact .col-b`,
+    { interval: 70 }
+  );
 }
-
-ScrollReveal({
-  origin: "bottom",
-  distance: "50px",
-  duration: 1000,
-}).reveal(
-  `#home,
-  #home img,
-  #about,
-  #about header,
-  #about p,
-  #about img,
-  #projects,
-  #projects header,
-  #projects .card,
-  #knowledge,
-  #knowledg header,
-  #knowledg .card,
-  #contact,
-  #contact header`
-);
-
-toggle.addEventListener("change", () => {
-  document.body.classList.toggle("light-mode");
-});
